@@ -24,7 +24,7 @@ public class WebServerApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello World!";
+        return "Hello from web-server";
     }
 }
 
