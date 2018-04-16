@@ -1,6 +1,7 @@
 package hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
@@ -17,6 +18,9 @@ import java.util.List;
 @RestController
 public class WebServerApplication {
 
+    @Value("${server.port}")
+    private String appName;
+
     public static void main(String[] args) {
         SpringApplication.run(WebServerApplication.class, args);
     }
@@ -24,7 +28,7 @@ public class WebServerApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello from web-server";
+        return "Hello from web-server " +  appName;
     }
 }
 
