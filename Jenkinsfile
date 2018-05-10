@@ -8,12 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'docker -v'
                 sh 'mvn -B -DskipTests clean package'
-            }
-        }
-        stage('Deliver') {
-            steps {
-                sh 'docker ps'
+                sh 'printenv'
             }
         }
     }
