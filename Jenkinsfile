@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                input 'Finished using the web site? (Click "Proceed" to continue)'
+                sh 'docker ps'
             }
         }
     }
