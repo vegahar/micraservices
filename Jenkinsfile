@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './scripts/deploy.sh'
+                input 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
     }
