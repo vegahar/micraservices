@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
-echo 'Completed deliver'
+echo 'Completed deploy'

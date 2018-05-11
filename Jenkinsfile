@@ -26,6 +26,7 @@ pipeline {
                 sh 'whoami'
                 sh 'echo $HOME'
                 sh 'echo $USER'
+                bash './scripts/deploy.sh'
             }
         }
     }
