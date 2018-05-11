@@ -1,5 +1,8 @@
 pipeline {
     agent none
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
     stages {
         stage('Build') {
             agent {
@@ -10,10 +13,9 @@ pipeline {
             }
             steps {
                 sh 'mvn -B -DskipTests clean package'
-                sh 'printenv'
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             agent {
                 docker {
                     image 'ubuntu:latest'
