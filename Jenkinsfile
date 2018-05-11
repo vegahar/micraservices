@@ -23,7 +23,9 @@ pipeline {
                 sh 'ls'
                 sh 'pwd'
                 sh 'printenv'
-                sh 'scripts/deploy.sh'
+                sh 'whoami'
+                sh 'echo $HOME'
+                sh 'echo $USER'
             }
         }
     }
