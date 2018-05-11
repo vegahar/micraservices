@@ -23,7 +23,7 @@ pipeline {
                 sh 'ls'
                 sh 'pwd'
                 sh 'printenv'
-                sh './scripts/deploy.sh'
+                sh 'scripts/deploy.sh'
             }
         }
     }
