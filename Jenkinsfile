@@ -16,7 +16,7 @@ pipeline {
         stage('deploy') {
             agent {
                 docker {
-                    image 'ubuntu'
+                    image 'ubuntu:latest'
                 }
             }
             steps {
