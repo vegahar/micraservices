@@ -20,13 +20,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'ls'
-                sh 'pwd'
-                sh 'printenv'
-                sh 'whoami'
-                sh 'echo $HOME'
-                sh 'echo $USER'
-                bash './scripts/deploy.sh'
+                script './scripts/deploy.sh'
             }
         }
     }
