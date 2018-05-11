@@ -20,7 +20,7 @@ pipeline {
                 }
             }
             steps {
-                script './scripts/deploy.sh'
+                sh 'cd scripts/ && chmod 755 ./deploy.sh && ./deploy.sh'
             }
         }
     }
