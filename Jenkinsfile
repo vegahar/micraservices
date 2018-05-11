@@ -12,5 +12,11 @@ pipeline {
                 sh 'printenv'
             }
         }
+        stage('deploy') {
+            steps {
+                sh './scripts/deploy.sh'
+                sh 'printenv'
+            }
+        }
     }
 }
