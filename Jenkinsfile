@@ -20,7 +20,10 @@ pipeline {
                 }
             }
             steps {
+                sh 'ls'
+                sh 'pwd'
                 sh 'printenv'
+                sh './scripts/deploy.sh'
             }
         }
     }
